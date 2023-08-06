@@ -1,5 +1,7 @@
 package com.pumkins.newsapi;
 
+import com.pumkins.newsapi.callback.ArticlesResponseCallback;
+import com.pumkins.newsapi.callback.SourcesCallback;
 import com.pumkins.newsapi.client.APIClient;
 import com.pumkins.newsapi.client.APIService;
 import com.pumkins.newsapi.dto.request.EverythingRequest;
@@ -32,18 +34,6 @@ public class NewsApiClient {
         mApiKey = apiKey;
         mAPIService = APIClient.getAPIService();
     }
-
-    //Callbacks
-    public interface SourcesCallback{
-        void onSuccess(SourcesResponse response);
-        void onFailure(Throwable throwable);
-    }
-
-    public interface ArticlesResponseCallback{
-        void onSuccess(ArticleResponse response);
-        void onFailure(Throwable throwable);
-    }
-
 
     private Throwable errMsg(String str) {
         Throwable throwable = null;

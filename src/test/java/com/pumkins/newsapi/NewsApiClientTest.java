@@ -1,5 +1,6 @@
 package com.pumkins.newsapi;
 
+import com.pumkins.newsapi.callback.ArticlesResponseCallback;
 import com.pumkins.newsapi.dto.Article;
 import com.pumkins.newsapi.dto.request.TopHeadlinesRequest;
 import com.pumkins.newsapi.dto.response.ArticleResponse;
@@ -26,7 +27,7 @@ public class NewsApiClientTest {
             .setLanguage("en");
         newsApiClient.getTopHeadlines(
             topHeadlinesRequest,
-            new NewsApiClient.ArticlesResponseCallback() {
+            new ArticlesResponseCallback() {
                 @Override
                 public void onSuccess(ArticleResponse response) {
                     for (Article article : response.getArticles()) {
