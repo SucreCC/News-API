@@ -2,12 +2,12 @@
 It is a project written by Java which can allow us to get today's hot topics according to keywords like country (US, UK, CN...), media (CNN, BBC, Google...), and category (health, science, sport...).
 
 
-
-A project to get the news via News Api
+# Verson Control
 JKD version 8
 
 
-Note: need add below dependency into your pom file when you want to use this project
+# Note
+need add below dependency into your pom file when you want to use this project
 
         <dependency>
             <groupId>com.vaadin.external.google</groupId>
